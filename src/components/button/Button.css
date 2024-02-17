@@ -12,8 +12,13 @@
     opacity: 0.8;
 }
 
-.button.active {
-    background: #f1f1f1;
-    color: #1d1818;
+.button {
+    background: white;
+    color: black;
     border: 1px solid #ccc;
+}
+.active {
+    background: #2954c9;
+    color: white;
+    
 }

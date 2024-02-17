@@ -5,10 +5,10 @@ import TextAboutMe from "./components/TextAboutMe";
 import Button from "./components/button/Button.jsx";
 
 function App() {
-  const [content, setContent] = useState("Press the button!");
+  const [contentType, setContentType] = useState(null);
 
   function handleClick(type) {
-    setContent(type);
+    setContentType(type);
     // console.log("Button clicked!", type);
   }
 
@@ -19,23 +19,30 @@ function App() {
         <section>
           <h2>Dmytro</h2>
           <ul>
-            <TextAboutMe
+            {/* <TextAboutMe
               title={aboutMe[0].title}
               description={aboutMe[0].description}
             />
             <TextAboutMe {...aboutMe[1]} />
             <TextAboutMe {...aboutMe[2]} />
-            <TextAboutMe {...aboutMe[3]} />
+            <TextAboutMe {...aboutMe[3]} /> */}
+            {aboutMe.map((item, index) => (
+              <TextAboutMe key={index} {...item} />
+            ))}
           </ul>
         </section>
         <section>
           <h3>Reach me at: </h3>
 
-          <Button onClick={() => handleClick("linkedin")}>LinkedIn</Button>
-          <Button onClick={() => handleClick("github")}>GitHub</Button>
-          <Button onClick={() => handleClick("facebook")}>Facebook</Button>
+          <Button isActive={contentType === 'linkedin'} onClick={() => handleClick("linkedin")}>LinkedIn</Button>
+          <Button isActive={contentType === 'github'} onClick={() => handleClick("github")}>GitHub</Button>
+          <Button isActive={contentType === 'facebook'} onClick={() => handleClick("facebook")}>Facebook</Button>
 
-          <p>{socialLinks[content]}</p>
+          {contentType ? (
+            <p>{socialLinks[contentType]}</p>
+          ) : (
+            <p>Press the button</p>
+          )}
         </section>
       </main>
     </div>
