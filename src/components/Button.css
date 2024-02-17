@@ -1,0 +1,19 @@
+.button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s; 
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button.active {
+    background: #f1f1f1;
+    color: #1d1818;
+    border: 1px solid #ccc;
+}
