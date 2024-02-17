@@ -1,11 +1,15 @@
 import Header from "./components/Header";
-import { aboutMe } from "./data.js";
+import { aboutMe, socialLinks } from "./data.js";
+import { useState } from "react";
 import TextAboutMe from "./components/TextAboutMe";
 import Button from "./components/button/Button.jsx";
 
 function App() {
+  const [content, setContent] = useState("Press the button!");
+
   function handleClick(type) {
-    console.log("Button clicked!", type);
+    setContent(type);
+    // console.log("Button clicked!", type);
   }
 
   return (
@@ -30,6 +34,8 @@ function App() {
           <Button onClick={() => handleClick("linkedin")}>LinkedIn</Button>
           <Button onClick={() => handleClick("github")}>GitHub</Button>
           <Button onClick={() => handleClick("facebook")}>Facebook</Button>
+
+          <p>{socialLinks[content]}</p>
         </section>
       </main>
     </div>

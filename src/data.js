@@ -18,7 +18,7 @@ export const aboutMe = [
 ]
 
 export const socialLinks = {
-    linkedin: 'text1',
+    linkedin: 'https://www.linkedin.com/in/dmytro-holovnia-5860bb257/',
     github: 'text2',
     facebook: 'text3',
 }
