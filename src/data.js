@@ -14,11 +14,16 @@ export const aboutMe = [
     {
         title: 'My Projects',
         description: 'I am currently working on a few projects, including a personal blog and a web app for a local business.'
+    },
+    {
+        title: 'My Skills',
+        description: 'I am proficient in Python, Java, JavaScript, HTML, CSS, and React. I also have experience with Node.js, and SQL.'
+    
     }
 ]
 
 export const socialLinks = {
     linkedin: 'https://www.linkedin.com/in/dmytro-holovnia-5860bb257/',
-    github: 'text2',
-    facebook: 'text3',
+    github: 'https://github.com/DmytHol',
+    facebook: 'coming soon...',
 }

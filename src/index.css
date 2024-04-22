@@ -47,8 +47,12 @@ section ul li {
   padding: 1rem;
   margin-bottom: 1rem;
 }
-.content,
-p {
+.content
+ {
   padding: 1rem 0;
 }
 
+.link {
+  margin-top: 15px; 
+  display: flex
+}

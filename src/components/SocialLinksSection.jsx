@@ -34,7 +34,9 @@ export default function SocialLinksSection() {
       </Button>
 
       {contentType ? (
-        <p>{socialLinks[contentType]}</p>
+        <div>
+        <a className="link" href={socialLinks[contentType]} target="blank" rel="noopener noreferrer">Visit my {contentType} profile</a>
+        </div>
       ) : (
         <p>Press the button</p>
       )}
